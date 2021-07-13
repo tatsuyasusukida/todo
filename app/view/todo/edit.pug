@@ -1,0 +1,29 @@
+extends ../layout
+
+block title
+  title Todoの修正｜ToDoリスト管理アプリ
+
+block breadcrumb
+  nav.mt-3(aria-label='パンくずリスト')
+    .container-fluid
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='../../') ToDo
+        li.breadcrumb-item
+          a(href='../') 詳細
+        li.breadcrumb-item
+          a(href='./' aria-current='page') 修正
+
+block main
+  main
+    .container-fluid
+      h1 ToDoの修正
+      nav.mt-3(aria-label='メニュー')
+        .d-flex.flex-wrap.gap-2
+          a.btn.btn-outline-secondary(href='../') 戻る
+      form.mt-3(role='form')
+        .form-group.mb-3
+          label.form-label(for='content') ToDoの内容
+          input.form-control(type='text' name='content' id='content')
+        .d-grid
+          a.btn.btn-primary(href='./finish/') 修正

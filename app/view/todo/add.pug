@@ -1,0 +1,27 @@
+extends ../layout
+
+block title
+  title Todoの登録｜ToDoリスト管理アプリ
+
+block breadcrumb
+  nav.mt-3(aria-label='パンくずリスト')
+    .container-fluid
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='../') ToDo
+        li.breadcrumb-item
+          a(href='./' aria-current='page') 登録
+
+block main
+  main
+    .container-fluid
+      h1 ToDoの登録
+      nav.mt-3(aria-label='メニュー')
+        .d-flex.flex-wrap.gap-2
+          a.btn.btn-outline-secondary(href='../') 戻る
+      form.mt-3(role='form')
+        .form-group.mb-3
+          label.form-label(for='content') ToDoの内容
+          input.form-control(type='text' name='content' id='content')
+        .d-grid
+          a.btn.btn-primary(href='./finish/') 登録

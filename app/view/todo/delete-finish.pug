@@ -1,0 +1,22 @@
+extends ../layout
+
+block title
+  title Todoの削除完了｜ToDoリスト管理アプリ
+
+block breadcrumb
+  nav.mt-3(aria-label='パンくずリスト')
+    .container-fluid
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='../../') ToDo
+        li.breadcrumb-item 詳細
+        li.breadcrumb-item 削除
+        li.breadcrumb-item(aria-current='page') 完了
+
+block main
+  main
+    .container-fluid
+      h1 ToDoの削除完了
+      nav.mt-3(aria-label='メイン')
+        .d-grid
+          a.btn.btn-success(href='../../') ToDo一覧を表示する
