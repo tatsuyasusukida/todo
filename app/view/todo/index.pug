@@ -19,8 +19,5 @@ block main
           a.btn.btn-outline-primary(href='./add/') 登録...
       nav.mt-3(aria-label='メイン')
         .list-group
-          a.list-group-item.list-gorup-item-action(href='./1/') ここにToDoの内容が入ります
-          a.list-group-item.list-gorup-item-action(href='./1/') ここにToDoの内容が入ります
-          a.list-group-item.list-gorup-item-action(href='./1/') ここにToDoの内容が入ります
-          a.list-group-item.list-gorup-item-action(href='./1/') ここにToDoの内容が入ります
-          a.list-group-item.list-gorup-item-action(href='./1/') ここにToDoの内容が入ります
+          each todo in todos
+            a.list-group-item.list-gorup-item-action(href='./' + todo.id + '/') #{todo.content}

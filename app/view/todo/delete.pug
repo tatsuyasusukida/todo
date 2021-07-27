@@ -21,8 +21,8 @@ block main
       nav.mt-3(aria-label='メニュー')
         .d-flex.flex-wrap.gap-2
           a.btn.btn-outline-secondary(href='../') 戻る
-      form.mt-3(role='form')
+      form.mt-3(role='form' method='POST')
         p ToDoを削除してもよろしいですか?
         .d-grid.gap-2
-          a.btn.btn-danger(href='../../delete/finish/') 削除
+          button.btn.btn-danger(type='submit') 削除
           a.btn.btn-secondary(href='../') キャンセル

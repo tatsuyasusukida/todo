@@ -1,0 +1,169 @@
+@page {
+  size: a4;
+  margin: 20mm 20mm 20mm 20mm;
+}
+
+body {
+  font-family: serif;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+body {
+  counter-reset: h2;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 18pt;
+  border-bottom: 1pt solid black;
+  margin-bottom: 5mm;
+  counter-increment: h2;
+  counter-reset: h3;
+  page-break-before: always;
+}
+
+h2:before {
+  content: counter(h2) ". ";
+}
+
+h3 {
+  font-size: 14pt;
+  margin-bottom: 0;
+  counter-increment: h3;
+}
+
+h3:before {
+  content: counter(h2) "." counter(h3) ". ";
+}
+
+ol.arabic {
+  counter-reset: ol1;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ol.arabic > li {
+  counter-increment: ol1;
+}
+
+ol.arabic > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol.arabic > li > p:before {
+  content: "(" counter(ol1) ") ";
+}
+
+ol.loweralpha {
+  counter-reset: ol2;
+  list-style: none;
+  padding-left: 5mm;
+}
+
+ol.loweralpha > li {
+  counter-increment: ol2;
+}
+
+ol.loweralpha > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol.loweralpha > li > p:before {
+  content: "(" counter(ol1) "." counter(ol2) ") ";
+}
+
+ol.lowerroman {
+  counter-reset: ol3;
+  list-style: none;
+  padding-left: 5mm;
+}
+
+ol.lowerroman > li {
+  counter-increment: ol3;
+}
+
+ol.lowerroman > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol.lowerroman > li > p:before {
+  content: "(" counter(ol1) "." counter(ol2) "." counter(ol3) ") ";
+}
+
+table.tableblock {
+  width: 100%;
+  border: 1pt solid black;
+  border-collapse: collapse;
+}
+
+table.tableblock thead th {
+  font-weight: normal;
+  text-align: left;
+  border: 1pt solid black;
+  padding: 1mm;
+}
+
+table.tableblock tbody td {
+  border: 1pt solid black;
+  padding: 1mm;
+}
+
+table.tableblock tbody td p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#footer {
+  display: none;
+}
+
+.cover-project p {
+  text-align: center;
+  margin-top: 60mm;
+  margin-bottom: 0;
+  font-size: 24pt;
+  border-top: 5pt solid black;
+  padding-top: 5mm;
+}
+
+.cover-document p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24pt;
+  border-bottom: 5pt solid black;
+  padding-bottom: 5mm;
+}
+
+.cover-version p {
+  text-align: center;
+  margin-top: 5mm;
+  margin-bottom: 0;
+}
+
+.cover-date p {
+  text-align: center;
+  margin-top: 5mm;
+  margin-bottom: 0;
+}
+
+.cover-company p {
+  text-align: center;
+  margin-top: 60mm;
+  margin-bottom: 0;
+  font-size: 18pt;
+}
+
+.cover-address p {
+  text-align: center;
+  margin-top: 5mm;
+  margin-bottom: 0;
+}
